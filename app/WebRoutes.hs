@@ -39,6 +39,7 @@ generatedImage (imgTitle, imgs, codeText) = do
       for_ imgs (\filename -> H.img H.! A.src filename)
     H.pre $ H.toHtml $ intercalate "\n" codeText
 
+images :: [(Text, [H.AttributeValue], [Text])]
 images =
   [ rainbowStars
   , connectedSquares
